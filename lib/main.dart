@@ -6,13 +6,92 @@ void main() {
         child: Scaffold(
       // body: Center(child: LoadingProgressBar(true),),
       appBar: AppBar(
-        backgroundColor: Colors.red,
+        backgroundColor: const Color.fromARGB(255, 54, 187, 244),
         title: const Text("Lab01-02 - Flutter - Kaaka"),
       ),
-      body: MyWidget(),
+      body: TongHop(),
     )),
     debugShowCheckedModeBanner: false,
   ));
+}
+
+class TongHop extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(15),
+      child: Column(
+        children: [
+          const Row(
+            children: [
+              SizedBox(
+                width: 80,
+                child: Text('Username',
+                    style: TextStyle(fontSize: 16, color: Colors.grey)),
+              ),
+              Text('Tran Hoang Khai',
+                  style: TextStyle(fontSize: 16, color: Colors.black)),
+            ],
+          ),
+          const SizedBox(height: 5),
+          const Row(
+            children: [
+              SizedBox(
+                width: 80,
+                child: Text('Password',
+                    style: TextStyle(fontSize: 16, color: Colors.grey)),
+              ),
+              Text('khai*****01',
+                  style: TextStyle(fontSize: 16, color: Colors.black)),
+            ],
+          ),
+          const SizedBox(height: 5),
+          const Row(
+            children: [
+              SizedBox(
+                width: 80,
+                child: Text('Address',
+                    style: TextStyle(fontSize: 16, color: Colors.grey)),
+              ),
+              Text('Thanh Loc, Quan 12',
+                  style: TextStyle(fontSize: 16, color: Colors.black)),
+            ],
+          ),
+          const SizedBox(height: 5),
+          Row(
+            children: [
+              Expanded(
+                  child: ElevatedButton.icon(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.grey,
+                        foregroundColor: Colors.white,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20)),
+                      ),
+                      icon: const Icon(Icons.cancel, size: 20),
+                      label: const Text('Cancel',
+                          style: TextStyle(fontSize: 16)))),
+              const SizedBox(
+                width: 10,
+              ),
+              Expanded(
+                  child: ElevatedButton.icon(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color.fromARGB(255, 61, 237, 67),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20)),
+                      ),
+                      icon: const Icon(Icons.check_circle, size: 20),
+                      label: const Text('Submit',
+                          style: TextStyle(fontSize: 16, color: Colors.black))))
+            ],
+          )
+        ],
+      ),
+    );
+  }
 }
 
 class MyWidget extends StatelessWidget {
@@ -122,12 +201,12 @@ class MyWidget extends StatelessWidget {
     //         onPressed: () {
     //           print("Done!");
     //         },
-    //         style: ElevatedButton.styleFrom(
-    //             backgroundColor: Colors.pink,
-    //             foregroundColor: Colors.white,
-    //             shape: RoundedRectangleBorder(
-    //                 borderRadius: BorderRadius.circular(20)),
-    //             shadowColor: Colors.yellow.withOpacity(1)),
+    // style: ElevatedButton.styleFrom(
+    //     backgroundColor: Colors.pink,
+    //     foregroundColor: Colors.white,
+    //     shape: RoundedRectangleBorder(
+    //         borderRadius: BorderRadius.circular(20)),
+    //     shadowColor: Colors.yellow.withOpacity(1)),
     //         label: const Text('Android', style: TextStyle(fontSize: 20)),
     //         icon: const Icon(Icons.android, size: 20),
     //       ),
